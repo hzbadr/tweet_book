@@ -18,3 +18,28 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+
+# Install React
+```
+https://github.com/thestonefox/phoenix_react_redux_tutorial
+```
+```
+npm install --save react react-dom redux react-redux
+```
+```
+npm install --save-dev babel babel-preset-es2015 babel-preset-react
+```
+
+brunch-config.js
+```
+babel: {
+  presets: ["es2015", "react"],
+Also I need to whitelist the npm packages for Brunch to compile them:
+
+npm: {
+  enabled: true,
+  whitelist: ["phoenix", "phoenix_html", "react",
+              "react-dom", "redux", "react-redux"]
+}
+```
